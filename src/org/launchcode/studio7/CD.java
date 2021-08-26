@@ -6,16 +6,16 @@ public class CD extends BaseDisc implements OpticalDisc{
     private double availableStorageRemaining;
     private String formatStoredOnDisc;
     private String name;
-    private double radius;
+    private double diameter;
     private String color;
     private boolean isEdible;
     private boolean isNormallyThrown;
 
 
-    public CD(String name, double radius, String color, boolean isEdible, boolean isNormallyThrown, double spinsPerMinute, double storageCapacity, double availableStorageRemaining, String formatStoredOnDisc) {
-        super(name, radius, color, isEdible, isNormallyThrown);
+    public CD(String name, double diameter, String color, boolean isEdible, boolean isNormallyThrown, double spinsPerMinute, double storageCapacity, double availableStorageRemaining, String formatStoredOnDisc) {
+        super(name, diameter, color, isEdible, isNormallyThrown);
         this.name = name;
-        this.radius = radius;
+        this.diameter = diameter;
         this.color = color;
         this.isEdible = isEdible;
         this.isNormallyThrown = isNormallyThrown;
@@ -86,12 +86,12 @@ public class CD extends BaseDisc implements OpticalDisc{
         this.name = name;
     }
 
-    public double getRadius() {
-        return radius;
+    public double getDiameter() {
+        return diameter;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
+    public void setDiameter(double diameter) {
+        this.diameter = diameter;
     }
 
     public String getColor() {
