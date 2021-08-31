@@ -5,19 +5,13 @@ public class DVD extends BaseDisc implements OpticalDisc {
     private double storageCapacity;
     private double availableStorageRemaining;
     private String formatStoredOnDisc;
-    private String name;
-    private double diameter;
-    private String color;
-    private boolean isEdible;
-    private boolean isNormallyThrown;
+
+    public DVD(String name, double diameter, String color, boolean isEdible, boolean isNormallyThrown){
+        super(name, diameter, color, isEdible, isNormallyThrown);
+    }
 
     public DVD(String name, double diameter, String color, boolean isEdible, boolean isNormallyThrown, double spinsPerMinute, double storageCapacity, double availableStorageRemaining, String formatStoredOnDisc) {
         super(name, diameter, color, isEdible, isNormallyThrown);
-        this.name = name;
-        this.diameter = diameter;
-        this.color = color;
-        this.isEdible = isEdible;
-        this.isNormallyThrown = isNormallyThrown;
         this.spinsPerMinute = spinsPerMinute;
         this.storageCapacity = storageCapacity;
         this.availableStorageRemaining = availableStorageRemaining;
@@ -26,12 +20,12 @@ public class DVD extends BaseDisc implements OpticalDisc {
 
     @Override
     public void spinDisc() {
-        System.out.println("The user entered the " + this.name + " DVD into the player and it spins at " + this.spinsPerMinute + " rotations per minute." );
+        System.out.println("The user entered the " + getName() + " DVD into the player and it spins at " + this.spinsPerMinute + " rotations per minute." );
     }
 
     @Override
     public void readData() {
-        System.out.println("The " + this.name + " DVD outputs " + this.formatStoredOnDisc + ".");
+        System.out.println("The " + getName() + " DVD outputs " + this.formatStoredOnDisc + ".");
     }
 
     @Override
@@ -75,46 +69,6 @@ public class DVD extends BaseDisc implements OpticalDisc {
 
     public void setFormatStoredOnDisc(String formatStoredOnDisc) {
         this.formatStoredOnDisc = formatStoredOnDisc;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getDiameter() {
-        return diameter;
-    }
-
-    public void setDiameter(double diameter) {
-        this.diameter = diameter;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public boolean isEdible() {
-        return isEdible;
-    }
-
-    public void setEdible(boolean edible) {
-        isEdible = edible;
-    }
-
-    public boolean isNormallyThrown() {
-        return isNormallyThrown;
-    }
-
-    public void setNormallyThrown(boolean normallyThrown) {
-        isNormallyThrown = normallyThrown;
     }
 
 
